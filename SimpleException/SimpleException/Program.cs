@@ -29,6 +29,8 @@ namespace SimpleException
                 Console.WriteLine("Member type: {0}", e.TargetSite.MemberType);// тип члена
                 Console.WriteLine("Message: {0}",e.Message);//Сообщение
                 Console.WriteLine("Source: {0}", e.Source); //Источник
+                Console.WriteLine("Stack: {0}", e.StackTrace); //стек
+
             }
             //Ошибка была обработана,продолжаетсявыполнение следующегооператора
             Console.WriteLine("\n**** Out of exception logic ****");
