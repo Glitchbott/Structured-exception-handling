@@ -38,11 +38,13 @@ namespace SimpleException
             {
                 CurrentSpeed += delta;
 
-                if(CurrentSpeed > MaxSpeed)
+                if(CurrentSpeed >= MaxSpeed)
                 {
                     Console.WriteLine("{0}  has over !", PetName);
                     CurrentSpeed = 0;
                     carDead = true;
+                    // Ключевое слово throw для генерации исключения
+                    throw new Exception(string.Format("{0} has over speed >100! ", PetName));
                 }
                 else
                     Console.WriteLine("=>  CurrenSpeed = {0}", CurrentSpeed);
