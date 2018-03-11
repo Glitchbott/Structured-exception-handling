@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace SimpleException
 {
@@ -23,7 +24,15 @@ namespace SimpleException
             //Свойство TargetSite возвращает объект MethodBase
             catch(Exception e)
             {
+                // По умолчанию поле данных является пустым, поэтому проверить его на null
+                Console.WriteLine("\n-> Custom Data: ");
+                if(e.Data !=null)
+                {
+                    foreach (DictionaryEntry de in e.Data)
+                        Console.WriteLine("-> {0} : {1}", de.Key,de.Value);
+                }
                 Console.WriteLine("**** Error!!!****\n");// Ошибка
+                Console.WriteLine("HelpLink: {0}", e.HelpLink);// HelpLink
                 Console.WriteLine("Member name: {0}", e.TargetSite);// имя члена
                 Console.WriteLine("Class defining member: {0}", e.TargetSite.DeclaringType);// класс, определяющ член
                 Console.WriteLine("Member type: {0}", e.TargetSite.MemberType);// тип члена
