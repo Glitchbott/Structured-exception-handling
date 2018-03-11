@@ -20,10 +20,13 @@ namespace SimpleException
                 for (int i = 0; i < 10; i++)
                     myCar.Accelerate(10);
             }
+            //Свойство TargetSite возвращает объект MethodBase
             catch(Exception e)
             {
                 Console.WriteLine("**** Error!!!****\n");// Ошибка
-                Console.WriteLine("Method: {0}", e.TargetSite);// Метод
+                Console.WriteLine("Member name: {0}", e.TargetSite);// имя члена
+                Console.WriteLine("Class defining member: {0}", e.TargetSite.DeclaringType);// класс, определяющ член
+                Console.WriteLine("Member type: {0}", e.TargetSite.MemberType);// тип члена
                 Console.WriteLine("Message: {0}",e.Message);//Сообщение
                 Console.WriteLine("Source: {0}", e.Source); //Источник
             }
