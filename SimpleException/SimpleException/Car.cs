@@ -46,9 +46,13 @@ namespace SimpleException
                     // Создаем локальную переменную перед генерац Exeption объекта чтобы можно былообращ к св-ву HelpLink
                     Exception ex = new Exception(string.Format("{0} has over!", PetName));
                     ex.HelpLink = "http://www.CarsRUs.com";
+                  
+                    //Указать специальные данные , касающиеся ошибки.
+                    ex.Data.Add("TimesStamp",string.Format("The car exploed at {0}",DateTime.Now));//метка времени
+                    ex.Data.Add( "Cause","You have a lead foot");//причина
                     throw ex;
                     // Ключевое слово throw для генерации исключения
-                   // throw new Exception(string.Format("{0} has over speed ! ", PetName));
+                    // throw new Exception(string.Format("{0} has over speed ! ", PetName));
                 }
                 else
                     Console.WriteLine("=>  CurrenSpeed = {0}", CurrentSpeed);
