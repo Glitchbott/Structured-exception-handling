@@ -44,7 +44,7 @@ namespace SimpleException
                     CurrentSpeed = 0;
                     carDead = true;
                     // Ключевое слово throw для генерации исключения
-                    throw new Exception(string.Format("{0} has over speed >100! ", PetName));
+                    throw new Exception(string.Format("{0} has over speed ! ", PetName));
                 }
                 else
                     Console.WriteLine("=>  CurrenSpeed = {0}", CurrentSpeed);
