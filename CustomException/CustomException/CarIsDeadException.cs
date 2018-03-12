@@ -14,9 +14,9 @@ namespace CustomException
         public string PetName { get; set; }
 
         public CarIsDeadException() { }
-        public CarIsDeadException(string message, string cause,DateTime time)
+        public CarIsDeadException(string message, string cause,DateTime time ) : base(message)
         {
-            messageDetails = message;
+            
             CauseOfError = cause;
             ErrorTimesStamp = time;
           
