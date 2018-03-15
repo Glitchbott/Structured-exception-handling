@@ -16,9 +16,10 @@ namespace ProcessMultieExpceptions
             {
                 myCar.Accelerate(90);
             }
-            catch
+            catch(CarIsDeadException e)
             {
-                Console.WriteLine("Something bad happened  ");
+                Console.WriteLine(e.Message);
+                throw;
             }
             
             Console.ReadLine();
