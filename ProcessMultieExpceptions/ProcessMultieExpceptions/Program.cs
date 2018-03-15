@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ProcessMultieExpceptions
 {
@@ -16,13 +17,20 @@ namespace ProcessMultieExpceptions
             {
                 myCar.Accelerate(90);
             }
-            catch(CarIsDeadException e)
+            catch (CarIsDeadException e)
             {
-                Console.WriteLine(e.Message);
-                throw;
+                try
+                {
+                    FileStream fs = File.Open(@"C:carErrors.txt", FileMode.Open);
+
+                }
+                catch (Exception e2)
+                {
+                    throw new CarIsDeadException(e.Message, e2);
+                }
+
+                Console.ReadLine();
             }
-            
-            Console.ReadLine();
         }
     }
 }

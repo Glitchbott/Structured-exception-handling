@@ -21,6 +21,11 @@ namespace ProcessMultieExpceptions
             ErrorTimesStamp = time;
           
         }
+
+        public CarIsDeadException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
         //Переопределение свойства
         public override string Message
         {
