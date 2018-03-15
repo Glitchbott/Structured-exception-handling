@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessMultieExpceptions", "ProcessMultieExpceptions\ProcessMultieExpceptions.csproj", "{CEC0FB35-E150-4ACB-AE7C-5E80AA8AD18E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEC0FB35-E150-4ACB-AE7C-5E80AA8AD18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC0FB35-E150-4ACB-AE7C-5E80AA8AD18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC0FB35-E150-4ACB-AE7C-5E80AA8AD18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC0FB35-E150-4ACB-AE7C-5E80AA8AD18E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DEB9C79-EC79-4B02-A6FD-83838012736B}
+	EndGlobalSection
+EndGlobal
